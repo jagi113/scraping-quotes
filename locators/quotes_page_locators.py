@@ -9,3 +9,5 @@ class DropdownQuotesPageLocators:
     SEARCH_BUTTON = By.CSS_SELECTOR, "input[name='submit_button']"
     QUOTE = By.CSS_SELECTOR, "div.quote"
     
+    TAG_VALUE_OPTION = "select#tag option[value]"
+    

@@ -12,5 +12,3 @@ def get_chrome():
 
     return webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
 
-driver=webdriver.Chrome()
-driver.implicitly_wait(10)

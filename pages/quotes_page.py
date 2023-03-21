@@ -1,10 +1,9 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 
-from locators.quotes_page_locators import QuotesPageLocators
+from locators.quotes_page_locators import QuotesPageLocators, DropdownQuotesPageLocators
 from parsers.qoute import QuoteParser, DropdownQuoteParser
 
-from locators.quotes_page_locators import DropdownQuotesPageLocators
 
 
 class QuotesPage:
