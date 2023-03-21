@@ -21,7 +21,7 @@ class QuotesPage:
     @property
     def author_dropdown(self) -> Select:
         locator = DropdownQuotesPageLocators.AUTHOR
-        element = self.page.find_element(By.CSS_SELECTOR, locator)
+        element = self.page.find_element(*locator)
         return Select(element)
     
     def get_available_authors(self) -> list[str]:
@@ -33,7 +33,7 @@ class QuotesPage:
     @property
     def tags_dropdown(self) -> Select:
         locator = DropdownQuotesPageLocators.TAG
-        element = self.page.find_element(By.CSS_SELECTOR, locator)
+        element = self.page.find_element(*locator)
         return Select(element)
     
     def get_available_tags(self) -> list[str]:
@@ -44,13 +44,13 @@ class QuotesPage:
         
     
     @property
-    def search_button(self):
+    def search_button(self) -> Select:
         locator = DropdownQuotesPageLocators.SEARCH_BUTTON
-        element = self.page.find_element(By.CSS_SELECTOR, locator)
+        element = self.page.find_element(*locator)
         return element
     
     @property
     def dropdown_quote(self)-> list[DropdownQuoteParser]:
         locator = DropdownQuotesPageLocators.QUOTE
-        quote_tag = self.page.find_element(By.CSS_SELECTOR, locator)
+        quote_tag = self.page.find_element(*locator)
         return DropdownQuoteParser(quote_tag)
